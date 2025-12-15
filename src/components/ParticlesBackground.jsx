@@ -43,7 +43,7 @@ const ParticlesBackground = () => {
         },
         particles: {
             number: {
-                value: 80, // Number of particles
+                value: 40, // Number of particles
                 density: {
                     enable: true,
                     value_area: 800,

@@ -20,7 +20,7 @@ function Nav({ isOpen, setIsOpen }) {
 
         {/* Right side: Links and Button */}
        <nav className={`navbar-links ${isOpen ? 'open' : ''}`}>
-          <a href="Hero-section.jsx" className="nav-link" onClick={toggleMenu}>Home</a>
+          <a href="#home" className="nav-link" onClick={toggleMenu}>Home</a>
           <a href="#about" className="nav-link" onClick={toggleMenu}>About</a>
           <a href="#projects" className="nav-link" onClick={toggleMenu}>Projects</a>
           <a href="#contact" className="contact-button" onClick={toggleMenu}>Contact</a>
