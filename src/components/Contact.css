@@ -1,0 +1,102 @@
+.contact-section {
+    padding: 80px 40px;
+    background-color: #e4e7dc67; /* Matching the Projects background */
+    border-radius: 50px;
+}
+
+.section-title {
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.contact-content {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-pitch {
+    font-size: 1.1em;
+    margin-bottom: 50px;
+    color: #555;
+}
+
+/* --- Styling the Link Buttons --- */
+.contact-links-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows links to wrap on small screens */
+    justify-content: center;
+    gap: 20px;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+    /* Make it look like a prominent button/callout */
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 1.05em;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Styling for Email Link */
+.email-link {
+    background-color: black;
+    color: white;
+}
+
+.email-link:hover {
+    background-color: #333;
+    transform: translateY(-2px);
+}
+
+/* Styling for other links */
+.linkedin-link, .github-link {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+
+.linkedin-link:hover, .github-link:hover {
+    background-color: #eee;
+    transform: translateY(-2px);
+}
+
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 600px) {
+    .contact-links-container {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: stretch;
+    }
+
+    .contact-link {
+        justify-content: center;
+        padding: 12px 20px;
+    }
+}
+/* --- Styling for the new WhatsApp link --- */
+
+.whatsapp-link {
+    /* Classic WhatsApp Green */
+    background-color: #25D366; 
+    color: white;
+}
+
+.whatsapp-link:hover {
+    background-color: #128C7E; /* Darker green on hover */
+    transform: translateY(-2px);
+}
+
+/* Ensure the FaWhatsapp icon is styled correctly if using Lucide for others */
+.whatsapp-link svg {
+    /* If you need specific sizing for the Font Awesome icon */
+    min-width: 24px;
+    min-height: 24px;
+}

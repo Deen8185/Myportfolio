@@ -1,0 +1,123 @@
+.outternavbar_container {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Centers the inner navbar */
+  position: fixed;
+  top: 0;
+  z-index: 1000; /* Ensures it stays above other content */
+  background-color: transparent; /* Transparent background for outer container */
+  padding: 10px 0; /* Adds some vertical spacing */
+}
+
+.navbar-container {
+  display: flex;
+  /* Puts space between the logo (left) and the links (right) */
+  justify-content: space-between; 
+  /* Vertically aligns items in the center */
+  align-items: center; 
+  padding: 10px 30px; /* Adjust padding as needed for your screen size */
+  background-color: #e4e7dc67; 
+  width: 70%;
+ /* White border for separation */
+  position: fixed; 
+  top: 15px; /* Slightly down from the top */
+  z-index: 1000; /* Ensures the navbar stays above other content */
+  border-radius: 16px; /* Rounded corners for a modern look */
+}
+
+/* Styling for the Logo/Name */
+.navbar-logo a {
+  font-size: 1.2em;
+  font-weight: bold;
+  text-decoration: none;
+  color: #000; /* Black text */
+}
+
+/* Container for the navigation links */
+.navbar-links {
+  display: flex;
+  gap: 25px; /* Spacing between the navigation items */
+  align-items: center; /* Ensures all links (including the button) are aligned */
+}
+
+/* Styling for regular links */
+.navbar-links a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1em;
+  transition: color 0.3s;
+}
+
+.navbar-links a:hover {
+  color: #555; /* Subtle hover effect */
+}
+
+/* Styling for the distinct Contact button */
+.contact-button {
+  background-color: #000; /* Black background */
+  color: white !important; /* White text (using !important to override the general link color) */
+  padding: 10px 20px;
+  border-radius: 5px; /* Slightly rounded corners */
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: background-color 0.3s;
+}
+
+.contact-button:hover {
+  background-color: #333; /* Darker hover effect */
+}
+
+/* 1. Hide the hamburger icon by default on desktop */
+.menu-icon {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    z-index: 12; /* Ensure it's above the menu links */
+}
+
+
+/* --- Mobile Styles (768px and below) --- */
+@media (max-width: 768px) {
+    /* 2. Show the hamburger icon on mobile */
+    .menu-icon {
+        display: block;
+    }
+
+    /* 3. Hide the main links by default (when not open) */
+    .navbar-links {
+        display: flex;
+        flex-direction: column;
+        
+        /* This is the key positioning for the full-screen menu */
+        position: fixed; 
+        top: 0;
+        right: -300px; /* Start off-screen (hidden) */
+        width: 300px;
+        height: 100%;
+        background-color: #e4e7dc67; /* Match the background */
+        transition: right 0.3s ease-in-out;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        z-index: 11;
+        
+        /* Center content inside the menu */
+        justify-content: center;
+        align-items: center;
+        gap: 30px; /* Space out the links */
+    }
+
+    /* 4. State for when the menu is OPEN */
+    .navbar-links.open {
+        right: 0; /* Slide into view */
+    }
+    
+    .navbar-links a {
+        font-size: 1.5em; /* Make links bigger for easy tapping */
+        margin: 0;
+    }
+    
+    .contact-button {
+        padding: 12px 25px;
+        font-size: 1.2em;
+    }
+}

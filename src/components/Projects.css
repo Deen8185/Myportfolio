@@ -1,0 +1,84 @@
+.projects-section {
+    padding: 80px 40px;
+    background-color: #e4e7dc67; /* Slightly off-white background */
+    border-radius: 50px;
+}
+
+.section-title {
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.projects-grid {
+    display: grid;
+    /* Create a responsive grid: 2 columns on desktop, adapts below */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background-color: white;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.project-title {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.project-description {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.tech-tag {
+    display: inline-block;
+    background-color: #eee;
+    color: #333;
+    padding: 5px 10px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    font-size: 0.85em;
+}
+
+.project-links {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.live-link, .repo-link {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.3s;
+}
+
+.live-link:hover, .repo-link:hover {
+    color: #007bff; /* Example highlight color */
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    .projects-grid {
+        /* Single column on mobile */
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,151 @@
+.about-section {
+    padding: 80px 40px;
+    background-color: #f7f1f1d8; /* Slightly off-white background */
+    border-radius: 30px;
+}
+
+.section-title {
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.about-content {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start; /* Aligns content to the top */
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* --- Image Styling (Left Column) --- */
+
+.about-image-container {
+    flex-shrink: 0; /* Prevents image from shrinking */
+    width: 300px; /* Fixed width for the image container */
+    height: 300px;
+    border-radius: 50%; /* Makes the image circular */
+    overflow: hidden;
+    /* Optional: Add a slight border/shadow to make it pop */
+    box-shadow: 0 0 0 5px #000, 0 10px 20px rgba(0, 0, 0, 0.1); 
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the circle without distortion */
+}
+
+/* --- Text Styling (Right Column) --- */
+
+.about-text-content {
+    flex-grow: 1; /* Allows text to fill the remaining space */
+}
+
+.about-text-content h3 {
+    font-size: 2em;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.lead-paragraph {
+    font-size: 1.15em;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.about-text-content p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.download-cv-button {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.download-cv-button:hover {
+    background-color: #333;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column; /* Stack columns vertically */
+        align-items: center; /* Center everything when stacked */
+        text-align: center;
+    }
+    
+    .about-image-container {
+        margin-bottom: 30px;
+        width: 250px; 
+        height: 250px;
+    }
+
+    .about-text-content h3 {
+        font-size: 1.5em;
+    }
+}
+/* --- NEW Skills Grid Styling --- */
+
+.skills-container {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #eee; /* Separator line */
+}
+
+.skills-container h3 {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.skills-grid {
+    display: flex; /* Use flexbox for a simple, wrapping layout */
+    flex-wrap: wrap; 
+    gap: 25px; /* Space between each icon/skill item */
+    /* If you prefer a fixed grid: 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 20px; */
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    width: 80px; /* Give each item a fixed width for alignment */
+    text-align: center;
+}
+
+.skill-icon {
+    color: black; /* Default icon color */
+    transition: color 0.3s, transform 0.3s;
+}
+
+.skill-item:hover .skill-icon {
+    color: #007bff; /* Example: highlight color on hover */
+    transform: scale(1.1);
+}
+
+.skill-name {
+    font-size: 0.85em;
+    font-weight: 500;
+    color: #333;
+}
+
+/* Ensure responsiveness still stacks nicely */
+@media (max-width: 768px) {
+    /* If you used the flex-wrap for the skills-grid, it will handle wrapping naturally. */
+    /* If you used the fixed grid, you might need to adjust grid-template-columns here. */
+}

@@ -1,0 +1,39 @@
+/* Ensures the blur transition is smooth */
+.main-content {
+    transition: filter 0.3s ease-in-out; 
+}
+
+/* 4. The BLUR EFFECT */
+.blur-active {
+    filter: blur(5px); /* Adjust 5px to control the intensity */
+    /* Optional: Prevent user interaction with blurred content */
+    pointer-events: none; 
+}
+
+/* Optional: Styling for the overlay to catch clicks outside the sidebar */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); /* Semi-transparent black */
+    z-index: 10; /* Must be below the sidebar (11) and above the content (main-content) */
+}
+.particles-container {
+    position: fixed; /* Ensures it stays in place when scrolling */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Important: Place it behind all content */
+}
+
+/* Ensure your main content has a z-index > 0 so it sits on top */
+.main-content {
+    position: relative; /* Needs relative position to respect z-index */
+    z-index: 1; /* Sits on top of the particles (z-index 0) */
+    /* You may also want a transparent or white background on main-content 
+       so the particles are visible */
+    background-color: transparent; 
+}

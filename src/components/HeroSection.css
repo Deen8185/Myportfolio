@@ -1,0 +1,126 @@
+.hero-section {
+    /* Full height of the viewport minus the space for the navbar */
+    min-height: 80vh; 
+    display: flex;
+    /* Centers content horizontally */
+    justify-content: center; 
+    /* Centers content vertically */
+    align-items: center; 
+    position: relative;
+    overflow: hidden; /* Important to keep the decorative shape inside */
+    padding-top: 50px; /* Give space for the fixed/absolute navbar */
+}
+
+.hero-content {
+    z-index: 2; /* Ensure text is above the decorative shape */
+    text-align: left; /* Text aligns to the left within the content box */
+}
+
+/* --- Typography Styling --- */
+
+.greeting {
+    font-size: 1.1em;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.name-headline {
+    font-size: 6.5vw; /* Use viewport width for responsive, large text */
+    font-weight: 800; /* Extra bold */
+    margin: 0;
+    line-height: 1; /* Tight line height */
+}
+
+.title-subheadline {
+    font-size: 2vw; /* Smaller, but still prominent */
+    font-weight: 500;
+    margin-top: 10px;
+    color: #333; /* Slightly lighter than the name */
+}
+
+/* --- Info Block --- */
+
+.info-block {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between icons and text */
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    font-size: 1.5em; /* Size of the icons */
+}
+
+.icon-placeholder {
+    /* Style for the placeholder letters */
+    font-size: 1em; 
+    border: 1px solid black;
+    padding: 2px 5px;
+    cursor: pointer;
+}
+
+.cta-text {
+    font-size: 0.9em;
+    margin: 0;
+}
+
+/* --- Decorative Shape --- */
+
+
+
+/* --- Scroll Indicator --- */
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateY(16px, ) rotate(360deg); /* Rotate arrows to point down */
+    font-size: 1.5em;
+    opacity: 0.7;
+    animation: updown 1100ms infinite alternate-reverse;
+    box-align: center;
+}
+/* Tablet/Mobile Breakpoint (e.g., screens 768px wide and below) */
+@media (max-width: 768px) {
+    .hero-section {
+        /* Ensure the content is still centered, but maybe with more vertical padding */
+        padding: 100px 20px; 
+    }
+    
+    /* * Scale down the main name headline 
+     * Change from 6.5vw (viewport width) to a smaller, fixed size
+     */
+    .name-headline {
+        font-size: 15vw; /* Still uses viewport but is much smaller */
+    }
+
+    /* Scale down the professional title */
+    .title-subheadline {
+        font-size: 5vw; 
+    }
+
+    /* Stack the social icons and the "Find out more" text */
+    .info-block {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align stacked items to the left */
+        margin-top: 30px;
+    }
+    
+    /* Modify the decorative shape so it doesn't overwhelm the screen */
+    .decorative-shape {
+        width: 100vw; /* Make it wider, perhaps */
+        height: 80vh; /* Make it shorter */
+        right: -50vw; /* Push it further off-screen to the right */
+    }
+}
+@keyframes updown {
+    0%{
+    transform: translateY(0)
+    }
+    100%{
+        transform: translateY(15px)
+    }
+    
+}
