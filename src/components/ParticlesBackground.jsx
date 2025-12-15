@@ -33,11 +33,11 @@ const ParticlesBackground = () => {
                 // Configuration for the 'repulse' mode when hovering
                 repulse: {
                     distance: 100, // How far particles are pushed away
-                    duration: 0.4,
+                    duration: 0.3,
                 },
                 // Configuration for the 'push' mode when clicking
                 push: {
-                    quantity: 4, // How many particles are generated on click
+                    quantity: 2, // How many particles are generated on click
                 }
             },
         },
@@ -46,17 +46,17 @@ const ParticlesBackground = () => {
                 value: 40, // Number of particles
                 density: {
                     enable: true,
-                    value_area: 800,
+                    value_area: 500,
                 },
             },
             color: {
                 value: "#000000", // Black particles to match your minimalist theme
             },
             shape: {
-                type: "circle", // "circle", "edge", "triangle", "polygon", "star", "image"
+                type: "star", // "circle", "edge", "triangle", "polygon", "star", "image"
             },
             size: {
-                value: 3, // Size of particles
+                value: 1, // Size of particles
                 random: true,
                 anim: {
                     enable: false,

@@ -4,7 +4,7 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 import { useState } from 'react';
 
 
-function Nav({ isOpen, setIsOpen }) {
+function Nav({ isOpen, setIsOpen,}) {
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -20,10 +20,10 @@ function Nav({ isOpen, setIsOpen }) {
 
         {/* Right side: Links and Button */}
        <nav className={`navbar-links ${isOpen ? 'open' : ''}`}>
-          <a href="#home" className="nav-link" onClick={toggleMenu}>Home</a>
-          <a href="#about" className="nav-link" onClick={toggleMenu}>About</a>
-          <a href="#projects" className="nav-link" onClick={toggleMenu}>Projects</a>
-          <a href="#contact" className="contact-button" onClick={toggleMenu}>Contact</a>
+          <a href="#home" className="nav-link" onClick={isOpen && toggleMenu}>Home</a>
+          <a href="#about" className="nav-link" onClick={isOpen && toggleMenu}>About</a>
+          <a href="#projects" className="nav-link" onClick={isOpen && toggleMenu}>Projects</a>
+          <a href="#contact" className="contact-button" onClick={isOpen && toggleMenu}>Contact</a>
        </nav>
       
         {/* Hamburger Menu Icon for Mobile */}

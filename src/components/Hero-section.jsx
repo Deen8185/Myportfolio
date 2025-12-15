@@ -5,7 +5,7 @@ import { ChevronsDown } from 'lucide-react';
 
 const HeroSection = () => {
   return (
-    <section className="hero-section">
+    <section className="hero-section" id="home">
       <div className="hero-content">
         
         <p className="greeting">Hey, I'm</p>
