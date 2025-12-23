@@ -27,7 +27,7 @@ const HeroSection = () => {
           </div>
 
           <p className="cta-text">
-            Find out more about me.
+            Find out more about us.
           </p>
         </div>
       </div>
