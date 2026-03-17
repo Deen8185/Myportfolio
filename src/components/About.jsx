@@ -3,57 +3,57 @@ import './About.css';
 import { 
     FaJs, 
     FaPhp, 
-    FaHtml5, 
-    FaCss3Alt, 
     FaReact, 
-    FaFigma, 
-    FaGitAlt 
+    FaPython,
+    FaHtml5,
+    FaCss3Alt,
+    FaShieldAlt 
 } from 'react-icons/fa';
-import ProfileImage from '../assets/react.svg'; 
+import { SiFastapi} from 'react-icons/si';
+import ProfileImage from '../assets/portfoliopics.jpg'; 
 
-// Data array for skills with corresponding icons
+// Updated skills to reflect Cybersecurity and AI Architecture focus
 const SKILLS = [
-    { name: "JavaScript", icon: FaJs },      // FaJs
-    { name: "PHP", icon: FaPhp },            // FaPhp
+    { name: "Python & Security", icon: FaPython },
+    { name: "FastAPI", icon: SiFastapi },
+    { name: "Cybersecurity", icon: FaShieldAlt },
+    { name: "React", icon: FaReact },
     { name: "HTML5", icon: FaHtml5 },        // FaHtml5
-    { name: "CSS3", icon: FaCss3Alt },      // FaCss3Alt (common name in Fa)
-    { name: "React", icon: FaReact },        // FaReact
+    { name: "CSS3", icon: FaCss3Alt },      // FaCss3Alt
+    { name: "JavaScript", icon: FaJs },
 ];
 
 const About = () => {
     return (
         <section id="about" className="about-section">
-            <h2 className="section-title">About us.</h2>
+            <h2 className="section-title">The Architect.</h2>
             
             <div className="about-content">
-                {/* Left Column: Image/Avatar */}
                 <div className="about-image-container">
                     <img 
                         src={ProfileImage} 
-                        alt="Deen Profile" 
+                        alt="Deen Da Bug" 
                         className="profile-image" 
                     />
                 </div>
 
-                {/* Right Column: Text Content */}
                 <div className="about-text-content">
-                    <h3>Hello! I'm Deen.</h3>
+                    <h3>I'm Deen Da Bug.</h3>
                     
                     <p className="lead-paragraph">
-                        A <strong>Web Developer and Cyber security analyst</strong> specializing in building elegant, performant, and user-centric web applications.
+                        A <strong>Cybersecurity Analyst and AI Architect</strong> dedicated to orchestrating secure, high-level technical ecosystems.
                     </p>
                     
                     <p>
-                        With years of experience focused primarily on web dev & cyber security, I excel at turning complex business requirements into clean, maintainable code.
+                        Currently in my final year at <strong>Bayero University Kano</strong>, I am undergoing industrial training at the <strong>FCTA ICT Lab in Abuja</strong>. My work there focuses on infrastructure security and technical innovation, bridging the gap between theoretical defense and practical implementation.
                     </p>
                     
                     <p>
-                        When I'm not coding, you can find me exploring new UI/UX trends, contributing to open-source projects and going bug hunting.
+                        I identify as a <strong>Conceptual Idealist</strong>. I prioritize the <strong>Supervisor Pattern</strong> in AI orchestration—designing master systems that manage specialized agents to ensure efficiency and precision. As a co-founder of <strong>K²Nexus</strong>, I specialize in transforming complex requirements into scalable full-stack and AI-driven solutions.
                     </p>
 
-                    {/* Skills Section */}
                     <div className="skills-container">
-                        <h3>My Core Stack</h3>
+                        <h3>Core Intelligence & Stack</h3>
                         <div className="skills-grid">
                             {SKILLS.map((skill) => {
                                 const IconComponent = skill.icon;

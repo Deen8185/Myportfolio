@@ -100,3 +100,16 @@
     min-width: 24px;
     min-height: 24px;
 }
+.linkedin-link {
+    background-color: white;
+    color: #0077b5; /* Official LinkedIn Blue for the text/icon */
+    border: 2px solid #0077b5;
+    transition: all 0.3s ease;
+}
+
+.linkedin-link:hover {
+    background-color: #0077b5; /* Flips to blue on hover */
+    color: white; /* Text turns white */
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 119, 181, 0.3); /* Soft blue glow */
+}

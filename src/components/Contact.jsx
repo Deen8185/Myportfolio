@@ -58,6 +58,16 @@ const Contact = () => {
                         <span>See My Code on GitHub</span>
                     </a>
 
+                    <a 
+                    href="https://www.linkedin.com/in/kamaludeen-abdulkadir-b4b9962ba" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="contact-link linkedin-link"
+                    >
+                    <Linkedin size={30} />
+                    <span>LinkedIn</span>
+                    </a>
+
                 </div>
             </div>
         </section>
